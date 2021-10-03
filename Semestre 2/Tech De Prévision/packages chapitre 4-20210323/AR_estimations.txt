@@ -1,0 +1,70 @@
+# Comparison of AR estimations
+# les données sont dans c:\R\data
+# Monthly data
+library(seasonal)
+
+y <- read.table("c:\\R\\data\\demandbrut.txt")
+yy <- ts(data = y, start=c(1996,01),frequency=12)
+seasX <- seas(yy)
+cvs <- final(seasX)
+yyc <- cvs
+
+dyy <- diff(yyc, differences = 1)
+
+AR(1)
+out1=ar(dyy,aic=FALSE,order.max=1, method="ols")
+show(out1)
+
+out2=ar(dyy,aic=FALSE,order.max=1, method="yule-walker")
+show(out2)
+
+out3=ar(dyy,aic=FALSE,order.max=1, method="burg")
+show(out3)
+
+out4=ar(dyy,aic=FALSE,order.max=1, method="mle")
+show(out4)
+
+library(forecast)
+out5=Arima(dyy,order=c(1,0,0),seasonal=list(order=c(0,0,0),period=12),lambda=1)
+show(out5)
+
+library(tseries)
+out6=arma(dyy,order=c(1,0))
+show(out6)
+
+**********************************************************
+AR(p)
+out1=ar(dyy,aic=TRUE,order.max=12)
+show(out1)
+
+
+**********************************************************
+ARMA(1,1)
+out1=arima(dyy,order=c(1,0,1), method="CSS")
+show(out1)
+
+out2=arima(dyy,order=c(1,0,1), method="ML")
+show(out2)
+
+out3=arima(dyy,order=c(1,0,1), method="CSS-ML")
+show(out3)
+
+library(tseries)
+out4=arma(dyy,order=c(1,1))
+show(out4)
+
+library(forecast)
+out5=Arima(dyy,order=c(1,0,1),seasonal=list(order=c(0,0,0),period=12),lambda=1)
+show(out5)
+
+**********************************************************
+ARMA(p,q)
+library(forecast)
+out2=auto.arima(dyy,d=0, D=0, max.P=0, max.Q=0)
+show(out2)
+
+**********************************************************
+SARIMA(p,d,q)(P,D,Q)_S
+library(forecast)
+out3=auto.arima(yy)
+show(out3)

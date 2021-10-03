@@ -1,0 +1,12 @@
+1 DUPONT Toto L3 Math-Eco ERASMUS
+2 MARTIN Elise L3 Analyse-Eco ERASMUS
+3 ZINZIN Antoine L3 Math-Eco
+4 BLABLA Nicolas L3 Analyse-Eco
+5 UPSALA David L3 Analyse-Eco Césure
+6 DATA Scientist L3 Eco
+7 NANTES Naoned L3 Eco_Appliquée
+8 INSTRUMENT Demusique L3 Math-Eco Déléguée
+9 NANANI Nanana L3 Econométrie
+10 LACIGALE Etlafourmi L3 Analyse-Eco
+11 BABAR Celeste L3 Analyse-Eco
+12 LELOUP Etlagneau L3 MIASH

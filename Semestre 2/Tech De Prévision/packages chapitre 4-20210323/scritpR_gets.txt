@@ -1,0 +1,111 @@
+# ARX modelling & variable selection with gets package
+
+# libraries
+library(readxl)
+library(tidyverse)
+
+library(lgarch)		# Gets modelling
+library(gets)
+
+#--------------------------------------------------------------------
+#database
+dlbase <- read_excel("c:\\R\\data\\database.xlsx", sheet = "dlbase")
+dlbase <- data.frame(dlbase) # sinon erreur pour la suite
+summary(dlbase)
+str(dlbase)
+training_dlbase <- dlbase
+data.frame(training_dlbase)
+
+***********************************************************************
+## Gets modelling ARX
+# convert tibble in matrix for the function arx
+class(dlbase[,2:4]) # tibble
+mX = data.matrix(training_dlbase[,2:4])
+
+# ARX model with AR(1)
+Model01 <- arx(training_dlbase$Ddemand, mc = T, ar = 1, mxreg = mX[, 1:3], vcov.type = "ordinary") 
+Model01
+
+# ARX model with AR(1) without the last variable
+Model02 <- arx(training_dlbase$Ddemand, mc = T, ar = 1, mxreg = mX[, 1:2], vcov.type = "ordinary") 
+Model02
+
+# ARX model with AR(1) with White correction on vcv
+Model03 <- arx(training_dlbase$Ddemand, mc = T, ar = 1, mxreg = mX[, 1:2], vcov.type = "white") 
+Model03
+
+************************************************************************
+## Gets variable selection
+# ARX model with AR(1)
+Model01 <- arx(training_dlbase$Ddemand, mc = T, ar = 1, mxreg = mX[, 1:3], vcov.type = "ordinary")
+getsm <- getsm(Model01) 
+getsm
+
+# Gets betas
+coef.arx(getsm)
+
+# Get the name of relevant variables
+names <- names(coef.arx(getsm))
+names <- names_mX[-1] # remove the AR(1) coef.
+names
+
+
+************************************************************************
+## Forecasting
+training_dlbase <- dlbase[1:180,]
+testingbase <- dlbase[181:202, 1]
+dependvar <- dlbase[,2:3]
+indepvar <- dlbase$Ddemand
+dependvar2 <- data.frame(dependvar)
+
+----------------------------------------------------------------
+# forecast horizon h=22
+forecast <- NULL
+mX <- data.matrix(dependvar2[1:180,])
+y <- indepvar[1:180]
+model <- arx(y, mc = T, ar = 1, mxreg = mX, vcov.type = "ordinary")
+forecast <- predict(model, n.ahead = 22, newmxreg = data.matrix(dependvar2[(181:202),]))	# 22-step ahead forecast
+forecast
+error <- testingbase - forecast
+error
+
+----------------------------------------------------------------
+# Recursive one-step ahead forecasts for h=22
+# forecast horizon h=22
+forecast <- NULL
+for (i in 1:22) {
+mX <- data.matrix(dependvar2[1:(179+i),])
+y <- indepvar[1:(179+i)]
+model <- arx(y, mc = T, ar = 1, mxreg = mX, vcov.type = "ordinary")
+forecast <- c(forecast, predict(model, n.ahead = 1, newmxreg = data.matrix(dependvar2[(180+i),])))	# one-step ahead forecast
+}
+forecast
+error <- testingbase - forecast
+error
+
+****************************************************************
+## Loss functions MSE, MAE, MdSE and MdAE
+mse <- function(error)
+{
+  mean(error^2)
+}
+mae <- function(error)
+{
+  men(abs(error))
+}
+mdse <- function(error)
+{
+  median(error^2)
+}
+mdae <- function(error)
+{
+  median(abs(error))
+}
+
+mse(error)
+mae(error)
+mdse(error)
+mdae(error)
+
+
+

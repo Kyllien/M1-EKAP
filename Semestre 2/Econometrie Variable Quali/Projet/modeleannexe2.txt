@@ -1,0 +1,232 @@
+
+================================================
+                         Dependent variable:    
+                     ---------------------------
+                                 PP             
+------------------------------------------------
+(Intercept):1                  -45.920          
+                            (92,749.980)        
+                                                
+(Intercept):2                  19.812           
+                            (144,930.000)       
+                                                
+(Intercept):3                  -3.344*          
+                               (1.718)          
+                                                
+(Intercept):4                  -0.786           
+                               (1.418)          
+                                                
+(Intercept):5                  24.712           
+                            (93,410.640)        
+                                                
+(Intercept):6                  -1.967           
+                               (1.465)          
+                                                
+(Intercept):7                 -120.869          
+                            (46,201.570)        
+                                                
+(Intercept):8                  -43.696          
+                            (158,376.700)       
+                                                
+(Intercept):9                  -2.643*          
+                               (1.454)          
+                                                
+(Intercept):10                 41.814           
+                            (101,821.700)       
+                                                
+(Intercept):12                -7.889***         
+                               (2.947)          
+                                                
+(Intercept):13                 -0.631           
+                               (2.543)          
+                                                
+(Intercept):14                 -5.830           
+                              (30.869)          
+                                                
+(Intercept):16                 -2.607           
+                               (1.641)          
+                                                
+AxePP                         5.870***          
+                               (0.744)          
+                                                
+Parent1PP                     1.297***          
+                               (0.411)          
+                                                
+Parent2PP                     1.636***          
+                               (0.419)          
+                                                
+Maire.PP:1                      1.211           
+                               (2.052)          
+                                                
+Maire.PP:2                      0.239           
+                               (0.307)          
+                                                
+Maire.PP:3                    -0.429**          
+                               (0.200)          
+                                                
+Maire.PP:4                      0.139           
+                               (0.142)          
+                                                
+Maire.PP:5                    -3.857**          
+                               (1.818)          
+                                                
+Maire.PP:6                      0.002           
+                               (0.123)          
+                                                
+Maire.PP:7                     13.105           
+                             (4,821.085)        
+                                                
+Maire.PP:8                      0.707           
+                               (0.846)          
+                                                
+Maire.PP:9                     0.279*           
+                               (0.163)          
+                                                
+Maire.PP:10                    -1.870           
+                               (2.542)          
+                                                
+Maire.PP:12                     0.054           
+                               (0.249)          
+                                                
+Maire.PP:13                    -0.427           
+                               (0.330)          
+                                                
+Maire.PP:14                    -0.105           
+                               (1.756)          
+                                                
+Maire.PP:16                    -0.080           
+                               (0.163)          
+                                                
+Type_Habitation:1               3.190           
+                               (6.967)          
+                                                
+Type_Habitation:2              -26.776          
+                            (144,930.000)       
+                                                
+Type_Habitation:3              -0.409           
+                               (0.900)          
+                                                
+Type_Habitation:4             -2.274***         
+                               (0.798)          
+                                                
+Type_Habitation:5              -27.270          
+                            (93,410.640)        
+                                                
+Type_Habitation:6             -1.442**          
+                               (0.643)          
+                                                
+Type_Habitation:7              29.140           
+                             (6,935.543)        
+                                                
+Type_Habitation:8               0.680           
+                               (1.729)          
+                                                
+Type_Habitation:9               0.490           
+                               (0.566)          
+                                                
+Type_Habitation:10             -29.107          
+                            (101,821.700)       
+                                                
+Type_Habitation:12             -0.036           
+                               (1.090)          
+                                                
+Type_Habitation:13             -0.628           
+                               (1.432)          
+                                                
+Type_Habitation:14              4.089           
+                              (15.227)          
+                                                
+Type_Habitation:16              0.669           
+                               (0.620)          
+                                                
+Parent2_Categorie:1             0.278           
+                               (1.321)          
+                                                
+Parent2_Categorie:2             0.140           
+                               (0.214)          
+                                                
+Parent2_Categorie:3            -0.078           
+                               (0.196)          
+                                                
+Parent2_Categorie:4            -0.128           
+                               (0.141)          
+                                                
+Parent2_Categorie:5            1.418**          
+                               (0.570)          
+                                                
+Parent2_Categorie:6            -0.074           
+                               (0.146)          
+                                                
+Parent2_Categorie:7            -28.055          
+                             (6,208.619)        
+                                                
+Parent2_Categorie:8             1.057           
+                               (0.768)          
+                                                
+Parent2_Categorie:9           -0.401**          
+                               (0.193)          
+                                                
+Parent2_Categorie:10           -2.777           
+                               (1.733)          
+                                                
+Parent2_Categorie:12           0.288**          
+                               (0.146)          
+                                                
+Parent2_Categorie:13           -0.370           
+                               (0.296)          
+                                                
+Parent2_Categorie:14           -1.510           
+                               (2.146)          
+                                                
+Parent2_Categorie:16            0.044           
+                               (0.180)          
+                                                
+JournalTv1:1                   18.285           
+                            (92,749.970)        
+                                                
+JournalTv1:2                    0.252           
+                               (1.564)          
+                                                
+JournalTv1:3                    1.236           
+                               (1.069)          
+                                                
+JournalTv1:4                    0.816           
+                               (0.731)          
+                                                
+JournalTv1:5                   -30.946          
+                            (46,277.190)        
+                                                
+JournalTv1:6                  2.960***          
+                               (1.147)          
+                                                
+JournalTv1:7                   10.689           
+                            (25,280.660)        
+                                                
+JournalTv1:8                   25.046           
+                            (158,376.700)       
+                                                
+JournalTv1:9                   -0.205           
+                               (0.792)          
+                                                
+JournalTv1:10                  -27.406          
+                            (90,098.390)        
+                                                
+JournalTv1:12                   0.568           
+                               (1.365)          
+                                                
+JournalTv1:13                   0.819           
+                               (1.561)          
+                                                
+JournalTv1:14                  -20.975          
+                            (11,808.490)        
+                                                
+JournalTv1:16                  -1.387*          
+                               (0.835)          
+                                                
+------------------------------------------------
+Observations                     188            
+R2                              0.477           
+Log Likelihood                -176.932          
+LR Test                 322.624*** (df = 73)    
+================================================
+Note:                *p<0.1; **p<0.05; ***p<0.01

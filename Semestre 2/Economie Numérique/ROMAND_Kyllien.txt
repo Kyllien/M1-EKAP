@@ -1,0 +1,20 @@
+libname Partiel "/home/u49794611/my_shared_file_links/u49310171/Partiel_EKAP";
+
+options notes;
+
+proc sort data=Partiel.r_magasin out=work.magasins; by CODE_BOUTIQUE; run;
+proc sort data=Partiel.r_tickets_2015 out=work.tickets; by CODE_BOUTIQUE; run;
+
+/* Fusion à gauche */
+data TICKET_MAG;
+	merge tickets (in=a)
+		  magasins (in=b);
+	by CODE_BOUTIQUE;
+	if a;
+	set TICKET_MAG;
+	if(VILLE = "Nice")THEN do(code_postal = "06000");
+	end;
+	ATTRIB ndep LABEL="numéro de département"
+				LENGTH=2
+				FORMAT=15.1;
+run;

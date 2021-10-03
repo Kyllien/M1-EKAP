@@ -1,0 +1,112 @@
+
+================================================
+                         Dependent variable:    
+                     ---------------------------
+                                 PP             
+------------------------------------------------
+(Intercept):1                  -12.660          
+                              (30.133)          
+                                                
+(Intercept):2                  -4.306           
+                               (4.739)          
+                                                
+(Intercept):3                  -3.566*          
+                               (1.938)          
+                                                
+(Intercept):4                 -2.753**          
+                               (1.272)          
+                                                
+(Intercept):5                  -6.874           
+                              (13.274)          
+                                                
+(Intercept):6                  -1.108           
+                               (0.999)          
+                                                
+(Intercept):7                  -7.535           
+                              (14.882)          
+                                                
+(Intercept):8                  -3.980           
+                              (11.049)          
+                                                
+(Intercept):9                  -1.202           
+                               (1.087)          
+                                                
+(Intercept):10                 -1.619           
+                              (11.725)          
+                                                
+(Intercept):12                -4.611***         
+                               (1.646)          
+                                                
+(Intercept):13                 -3.638           
+                               (2.259)          
+                                                
+(Intercept):14                 -6.586           
+                               (6.853)          
+                                                
+(Intercept):16                 -1.489           
+                               (1.504)          
+                                                
+AxePP                         5.476***          
+                               (1.040)          
+                                                
+Parent1PP                     1.271***          
+                               (0.407)          
+                                                
+Parent2PP                     1.584***          
+                               (0.428)          
+                                                
+Categorie_Parent1:1            -0.067           
+                               (4.408)          
+                                                
+Categorie_Parent1:2            -0.254           
+                               (1.003)          
+                                                
+Categorie_Parent1:3            -0.283           
+                               (0.378)          
+                                                
+Categorie_Parent1:4             0.005           
+                               (0.260)          
+                                                
+Categorie_Parent1:5            -0.102           
+                               (2.624)          
+                                                
+Categorie_Parent1:6            -0.113           
+                               (0.181)          
+                                                
+Categorie_Parent1:7             0.348           
+                               (2.122)          
+                                                
+Categorie_Parent1:8            -0.413           
+                               (3.705)          
+                                                
+Categorie_Parent1:9            -0.149           
+                               (0.225)          
+                                                
+Categorie_Parent1:10           -1.048           
+                               (3.959)          
+                                                
+Categorie_Parent1:12           -0.059           
+                               (0.334)          
+                                                
+Categorie_Parent1:13           -0.169           
+                               (0.398)          
+                                                
+Categorie_Parent1:14            0.505           
+                               (1.325)          
+                                                
+Categorie_Parent1:16           -0.136           
+                               (0.284)          
+                                                
+iv:Type1                      0.739***          
+                               (0.236)          
+                                                
+iv:Type2                      0.659***          
+                               (0.205)          
+                                                
+------------------------------------------------
+Observations                     188            
+R2                              0.352           
+Log Likelihood                -219.047          
+LR Test                 238.395*** (df = 33)    
+================================================
+Note:                *p<0.1; **p<0.05; ***p<0.01
